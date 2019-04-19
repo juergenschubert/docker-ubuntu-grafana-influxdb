@@ -1,0 +1,1 @@
+sudo docker run --name influx -d -v /opt/influxdb/:/opt/influxdb/shared/data -p 80:80 -p 8083:8083 -p 8086:8086 -p 8096:8096/udp influx

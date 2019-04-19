@@ -1,0 +1,6 @@
+[input_plugins]
+      [input_plugins.collectd]
+      enabled = true
+      port = 8096
+      database = "testdb"
+      typesdb = "/opt/influxdb/current/types.db"
