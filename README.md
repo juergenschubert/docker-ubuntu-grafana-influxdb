@@ -1,4 +1,4 @@
-I was using a Docker file with Grafana and InfluxDB which is:  
+I am using a Docker file with Grafana and InfluxDB which is:  
 https://hub.docker.com/r/philhawthorne/docker-influxdb-grafana/  
 You find how to start and how to use on his page
 
