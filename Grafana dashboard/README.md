@@ -1,12 +1,12 @@
-This is the documentation how to import the Dashboard.
+This is the documentation on how to import the Dashboard.
 
-As of today there are two types of Dashboards
+As of today, there are two types of Dashboards
 DataDomain - Streaming Demo  
-   - This is a full blown dashboard with streming data and not need to connect to a DD. For Demo purpose only
+   - This is a full-blown dashboard with streaming data and does not need to connect to a DD. For Demo purpose only
 DataDomain
-   - This is the Dashboard you should use for visualize your DD data. 
+   - This is the Dashboard you should use to visualize your DD data. 
 
-Please make sure that you create bost folder in Granfa with the same name as some references are not dynamic, just bound to a serach a folder name.
+Please make sure that you create a folder in Granfa with the same name as some references are not dynamic, just bound to a search a folder name.
 
 # Steps to create the folder structure  
 ### Go to manage your dashboard  
@@ -18,9 +18,9 @@ Please make sure that you create bost folder in Granfa with the same name as som
 ### Name the folder like DataDomain or DataDomain - Streaming Demo  
 ![Screen Shot 2021-04-29 at 08 11 56](https://user-images.githubusercontent.com/17120076/116508911-a0cf6400-a8c2-11eb-8172-e02f03cba08c.png)
 
-# Steps to import and move the Grafana Dashbords
-make sure you have downloaded both folder inside **Grafana dashboard** and the dashboard inside the folder.  
-Folder are DataDomain and DataDomain - Streaming Demo. 
+# Steps to import and move the Grafana Dashboards
+make sure you have downloaded both folders inside **Grafana dashboard** and the dashboard inside the folder.  
+The folders are DataDomain and DataDomain - Streaming Demo. 
 
 ### Import the dashboard
 Got to **manage dashboard**.   
@@ -39,11 +39,11 @@ Choose the right JSON file.
 Change / blank out the **uid** and choose the folder    
 ![Screen Shot 2021-04-29 at 08 20 36](https://user-images.githubusercontent.com/17120076/116509574-d9237200-a8c3-11eb-8ac1-6efbf177261e.png)
 
-Make sure you have choose the right folder to place the dashboard and wiped out the uid.   
+Make sure you have chosen the right folder to place the dashboard and wiped out the uid.   
 ![Screen Shot 2021-04-29 at 08 20 47](https://user-images.githubusercontent.com/17120076/116509580-dcb6f900-a8c3-11eb-8f94-5e3945241077.png)
 
 you should see the dashboard   
-# let's add the datasource.  
+# let's add the data source.  
 navigate to the Data Sources       
 ![Screen Shot 2021-04-29 at 08 24 36](https://user-images.githubusercontent.com/17120076/116510127-b6458d80-a8c4-11eb-9267-5ac204ea66fb.png)
 
@@ -54,7 +54,7 @@ Search for Influxdb.
 ![Screen Shot 2021-04-29 at 08 25 03](https://user-images.githubusercontent.com/17120076/116510181-ca898a80-a8c4-11eb-97cb-1db4284367d1.png)
 click on the datasource
 
-Add configuration and watch out that the very first time InfluxDB does not have DDALERT or any other DB available. So the add will fail.   
+Add configuration and watch out that the very first-time InfluxDB does not have DDALERT or any other DB available. So add will fail.   
 
 ![Screen Shot 2021-04-29 at 08 29 28](https://user-images.githubusercontent.com/17120076/116510331-0ae90880-a8c5-11eb-99fc-6315989df5b6.png)
 
