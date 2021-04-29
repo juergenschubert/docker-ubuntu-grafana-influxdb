@@ -1,4 +1,11 @@
-This is the documentation on how to import the Dashboard.
+# What is avaialblbe today with getting data form your DataDomain?
+## Live update dashboard
+alerts get updated today but this will change. Keep updating yourself.  
+![Screen Shot 2021-04-29 at 10 25 41](https://user-images.githubusercontent.com/17120076/116522546-99fe1c80-a8d5-11eb-925e-3958ad975321.png)
+## streaming data dashboard
+https://github.com/juergenschubert/docker-ubuntu-grafana-influxdb
+
+# This is the documentation on how to import the Dashboard.
 
 As of today, there are two types of Dashboards
 DataDomain - Streaming Demo  
@@ -66,6 +73,3 @@ Configure the InfluxDB details as user and database. As the DB you are choosing 
 ![Screen Shot 2021-04-29 at 08 25 57](https://user-images.githubusercontent.com/17120076/116510519-53a0c180-a8c5-11eb-9a15-7765aa85c724.png)   
 ![Screen Shot 2021-04-29 at 08 32 18](https://user-images.githubusercontent.com/17120076/116510588-6fa46300-a8c5-11eb-9dc4-0581d9a69a67.png)   
    
-# What is avaialblbe today with getting data form your DataDomain?
-alerts get updated today but this will change. Keep updating yourself.  
-![Screen Shot 2021-04-29 at 10 25 41](https://user-images.githubusercontent.com/17120076/116522546-99fe1c80-a8d5-11eb-925e-3958ad975321.png)
