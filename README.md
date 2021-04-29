@@ -1,4 +1,4 @@
-# Visualize YOUR DataDomain with Grafana
+# Visualize YOUR DataDomain capacity/performance data with Grafana
 
 The Dashboard showing some Information about your DD 
 ![DDGrafana-dashboard](https://user-images.githubusercontent.com/17120076/116391028-f5210800-a81e-11eb-923c-2f649867e92e.gif) 
