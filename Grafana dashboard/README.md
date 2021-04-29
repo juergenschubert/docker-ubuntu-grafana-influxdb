@@ -42,8 +42,8 @@ Change / blank out the **uid** and choose the folder
 Make sure you have choose the right folder to place the dashboard and wiped out the uid.   
 ![Screen Shot 2021-04-29 at 08 20 47](https://user-images.githubusercontent.com/17120076/116509580-dcb6f900-a8c3-11eb-8f94-5e3945241077.png)
 
-you should see the dashboard  
-#let's add the datasource.  
+you should see the dashboard   
+# let's add the datasource.  
 navigate to the Data Sources       
 ![Screen Shot 2021-04-29 at 08 24 36](https://user-images.githubusercontent.com/17120076/116510127-b6458d80-a8c4-11eb-9267-5ac204ea66fb.png)
 
