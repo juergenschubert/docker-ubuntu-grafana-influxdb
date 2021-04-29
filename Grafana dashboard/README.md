@@ -36,27 +36,6 @@ http://localhost:3003
 make sure you have downloaded both folders inside **Grafana dashboard** and the dashboard inside the folder.  
 The folders are DataDomain and DataDomain - Streaming Demo. 
 
-### Import the dashboard
-Got to **manage dashboard**.   
-![Screen Shot 2021-04-29 at 08 09 29](https://user-images.githubusercontent.com/17120076/116509280-500c3b00-a8c3-11eb-872f-a005ae21aa1d.png)
-
-Click on import.  
-![Screen Shot 2021-04-29 at 08 17 28](https://user-images.githubusercontent.com/17120076/116509324-60241a80-a8c3-11eb-9478-e14c76b35840.png)
-
-uplad JSON file.  
-![Screen Shot 2021-04-29 at 08 18 09](https://user-images.githubusercontent.com/17120076/116509389-7a5df880-a8c3-11eb-8df4-bbdc2d4c9c18.png)
-
-
-Choose the right JSON file.    
-![Screen Shot 2021-04-29 at 08 19 25](https://user-images.githubusercontent.com/17120076/116509472-a5e0e300-a8c3-11eb-828f-52aef2a5f6f9.png)
-
-Change / blank out the **uid** and choose the folder    
-![Screen Shot 2021-04-29 at 08 20 36](https://user-images.githubusercontent.com/17120076/116509574-d9237200-a8c3-11eb-8ac1-6efbf177261e.png)
-
-Make sure you have chosen the right folder to place the dashboard and wiped out the uid.   
-![Screen Shot 2021-04-29 at 08 20 47](https://user-images.githubusercontent.com/17120076/116509580-dcb6f900-a8c3-11eb-8f94-5e3945241077.png)
-
-you should see the dashboard   
 # let's add the data source.  
 navigate to the Data Sources       
 ![Screen Shot 2021-04-29 at 08 24 36](https://user-images.githubusercontent.com/17120076/116510127-b6458d80-a8c4-11eb-9267-5ac204ea66fb.png)
@@ -79,4 +58,30 @@ Configure the InfluxDB details as user and database. As the DB you are choosing 
 ![Screen Shot 2021-04-29 at 08 26 40](https://user-images.githubusercontent.com/17120076/116510497-4e437700-a8c5-11eb-8202-e5bf89b97570.png)   
 ![Screen Shot 2021-04-29 at 08 25 57](https://user-images.githubusercontent.com/17120076/116510519-53a0c180-a8c5-11eb-9a15-7765aa85c724.png)   
 ![Screen Shot 2021-04-29 at 08 32 18](https://user-images.githubusercontent.com/17120076/116510588-6fa46300-a8c5-11eb-9dc4-0581d9a69a67.png)   
-   
+ 
+
+### Import the dashboard
+Got to **manage dashboard**.   
+![Screen Shot 2021-04-29 at 08 09 29](https://user-images.githubusercontent.com/17120076/116509280-500c3b00-a8c3-11eb-872f-a005ae21aa1d.png)
+
+Click on import.  
+![Screen Shot 2021-04-29 at 08 17 28](https://user-images.githubusercontent.com/17120076/116509324-60241a80-a8c3-11eb-9478-e14c76b35840.png)
+
+uplad JSON file.  
+![Screen Shot 2021-04-29 at 08 18 09](https://user-images.githubusercontent.com/17120076/116509389-7a5df880-a8c3-11eb-8df4-bbdc2d4c9c18.png)
+
+
+Choose the right JSON file.    
+![Screen Shot 2021-04-29 at 08 19 25](https://user-images.githubusercontent.com/17120076/116509472-a5e0e300-a8c3-11eb-828f-52aef2a5f6f9.png)
+
+very first install of the dashboard - choose the folder your created before
+![Screen Shot 2021-04-29 at 13 13 48](https://user-images.githubusercontent.com/17120076/116542341-da1cc980-a8ec-11eb-90f6-924ab1e82ac8.png)
+
+Change / blank out the **uid** and choose the folder    
+![Screen Shot 2021-04-29 at 08 20 36](https://user-images.githubusercontent.com/17120076/116509574-d9237200-a8c3-11eb-8ac1-6efbf177261e.png)
+
+Make sure you have chosen the right folder to place the dashboard and wiped out the uid.   
+![Screen Shot 2021-04-29 at 08 20 47](https://user-images.githubusercontent.com/17120076/116509580-dcb6f900-a8c3-11eb-8f94-5e3945241077.png)
+
+you should see the dashboard   
+  
