@@ -28,7 +28,7 @@ Windows terminal/CLI
 
 
 **Why Grafana and InfluxDB**?   
-Because this is an easy way to visualize the content of a time series DB InfluxDB which got their series data from **YOUR** DataDomain.  
+Because this is an **best way** to visualize the content of a time series DB - InfluxDB which got their series data from **YOUR** DataDomain.  
 
 The **high-level concept** is to deploy Grafana and InfluxDB either on Linux or with docker, import the DataDomain Grafana dashboards for the visualization you see above, and use the **PowerShell cmdlet** to get live data from your DataDomain into InfluxDB which is the data source for Grafana. This can also be automated so you get these updates regularly and your Grafan will also show history. **BUT** watch-out as data will grow! Ensure that you either have enough space or delete older series manually or use [InfluxDB retention policies](https://docs.influxdata.com/influxdb/v1.8/guides/downsample_and_retain/)
 
