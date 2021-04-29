@@ -21,8 +21,8 @@ Before we can start we need to connect to our DD like:
 
 With that token, we can start the first metric the current and active alerts.
 There are several command option you do get by  
->get-Help Connect-DD
->get-Help Get-DDAlert
+>get-Help Connect-DD  
+>get-Help Get-DDAlert   
 
 #dump the measurement
 >Get-DDAlert  -DDfqdn $DD -DDAuthTokenValue $DDtoken -dumpmeasurement -InfluxDBServer 'localhost' -InfluxDB 'DDALERT' -DDR 'DD4200' -DDLocation 'Hamburg' -DDserialno 'CKM0013370252' 
