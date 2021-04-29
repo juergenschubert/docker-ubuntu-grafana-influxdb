@@ -49,6 +49,10 @@ Add configuration and watch out that the very first-time InfluxDB does not have 
 
 ![Screen Shot 2021-04-29 at 08 29 28](https://user-images.githubusercontent.com/17120076/116510331-0ae90880-a8c5-11eb-99fc-6315989df5b6.png)
 
+Name of the DataSource should be like:
+InfluxDB - DDALERT
+![Screen Shot 2021-04-29 at 13 20 29](https://user-images.githubusercontent.com/17120076/116543178-d6d60d80-a8ed-11eb-9472-0c274cc7e4a2.png)
+
 Configure the HTTP information to localhost:8086.   
 ![Screen Shot 2021-04-29 at 08 25 38](https://user-images.githubusercontent.com/17120076/116510410-26ecaa00-a8c5-11eb-9046-2ea3b7b32c4f.png)
 
