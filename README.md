@@ -1,6 +1,3 @@
-![Screen Shot 2021-04-29 at 09 36 36](https://user-images.githubusercontent.com/17120076/116516993-99ae5300-a8ce-11eb-9ea6-1da3dd2dfae6.png)
-
-
 The Dashboard showing some Information of your DD 
 ![DDGrafana-dashboard](https://user-images.githubusercontent.com/17120076/116391028-f5210800-a81e-11eb-923c-2f649867e92e.gif) 
 
