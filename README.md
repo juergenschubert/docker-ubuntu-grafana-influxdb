@@ -23,6 +23,8 @@ The **highlevel concept** is to deploy Grafana and InfluxDB either on Linux or w
 
 
 The folder in this github repo will conatain the following information.   
+![Screen Shot 2021-04-29 at 09 49 03](https://user-images.githubusercontent.com/17120076/116518131-2ad1f980-a8d0-11eb-9a75-93480a258c36.png)
+
 ## Grafana and InfluxDB  
 This will contain the docker file if you wanna create your own instead of consuming https://hub.docker.com/r/philhawthorne/docker-influxdb-grafana/.                   
 ## Grafana dashboard  
