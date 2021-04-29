@@ -202,7 +202,6 @@ function Get-DDAlert {
             Write-Error "Unable to connect to DataDomain: $DDfqdn." -Category ConnectionError
             exit
         }
-
     } #END BEGIN
 
     process {
@@ -225,6 +224,7 @@ function Get-DDAlert {
 
         } catch {
             Write-Host "[ERROR]FAILED to fetch alerts from $RestUrl"  -fore red
+            Write-Host "Try to renew your DDtoken with Connect-DD." -fore green
             Write-Host "StatusCode:" $_.Exception.Response.StatusCode.value__   -fore red
             Write-Host "StatusDescription:" $_.Exception.Response.StatusDescription  -fore red
         }
