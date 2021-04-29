@@ -1,4 +1,6 @@
-The Dashboard showing some Information of your DD 
+# Visualize YOUR DataDomain with Grafana
+
+The Dashboard showing some Information about your DD 
 ![DDGrafana-dashboard](https://user-images.githubusercontent.com/17120076/116391028-f5210800-a81e-11eb-923c-2f649867e92e.gif) 
 
 Visualize the DD Alerts of your DataDomain.   
@@ -14,15 +16,15 @@ Visualize the streams of your DataDomain
 
 I am using a Docker image with **Grafana** and **InfluxDB** which is:    
 https://hub.docker.com/r/philhawthorne/docker-influxdb-grafana/     
-You find how to start and how to use on his page.
+You find how to start and how to use it on his page.
 
 **Why Grafana and InfluxDB**?   
-Because this is a easy way to viualize the content of a time series DB InfluxDB which got their series data from **YOUR** DataDomain.  
+Because this is an easy way to visualize the content of a time series DB InfluxDB which got their series data from **YOUR** DataDomain.  
 
-The **highlevel concept** is to deploy Grafana and InfluxDB either on Linux or with docker, import the DataDomain Grafana dashboards for the visualization you see above and use the **PowerShell cmdlet** to get live data from your DataDomain into InfluxDB which is the datasource for Grafana. This can also be automated so you get these udates on a regular basis and your Grafan will also show history. **BUT** watch-out as data will grow! Ensure that you either have enough space or delete older series manually or use [InfluxDB retention policies](https://docs.influxdata.com/influxdb/v1.8/guides/downsample_and_retain/)
+The **high-level concept** is to deploy Grafana and InfluxDB either on Linux or with docker, import the DataDomain Grafana dashboards for the visualization you see above, and use the **PowerShell cmdlet** to get live data from your DataDomain into InfluxDB which is the data source for Grafana. This can also be automated so you get these updates regularly and your Grafan will also show history. **BUT** watch-out as data will grow! Ensure that you either have enough space or delete older series manually or use [InfluxDB retention policies](https://docs.influxdata.com/influxdb/v1.8/guides/downsample_and_retain/)
 
 
-The folder in this github repo will conatain the following information.   
+The folder in this GitHub repo will contain the following information.   
 ![Screen Shot 2021-04-29 at 09 49 03](https://user-images.githubusercontent.com/17120076/116518131-2ad1f980-a8d0-11eb-9a75-93480a258c36.png)
 
 ## Grafana and InfluxDB  
@@ -31,7 +33,7 @@ This will contain the docker file if you wanna create your own instead of consum
 Here you do find the latest and greatest Grafana dashboard. 
 
 ## PowerShell cmdlet  
-Here you do find the latest PowerShell cndlet which will query the DD and publish the result to InfluxDB.             
+Here you do find the latest PowerShell cmdlet which will query the DD and publish the result to InfluxDB.             
 
 **More will come - let me know what you need**
 # Tips and tricks
