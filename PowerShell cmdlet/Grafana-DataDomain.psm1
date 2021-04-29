@@ -262,8 +262,8 @@ function Get-DDAlert {
             $InfluxMeasurement ="insert DDAlertList,DDR=""$($DDR)"",DDLocation=""$($DDLocation)"",serialno=""$($DDserialno)"" activealert=$($alertno),totalalert=$($numberoftotalalerts.Count)"
 #            if (!$epochtime) {
 #                #create epoch nano seconds
-                $influxtimes = Get-Date (Get-Date).ToUniversalTime() -UFormat %s 
-                $influxtime = $influxtimes * 1000000000
+                [int64]$influxtimes = Get-Date (Get-Date).ToUniversalTime() -UFormat %s 
+                [int64]$influxtime = $influxtimes * 1000000000
                 #            } else {
 #                [int]$influxtime = $epochtime
 #            }
