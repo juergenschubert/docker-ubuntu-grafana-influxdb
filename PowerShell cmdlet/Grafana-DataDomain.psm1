@@ -53,13 +53,12 @@ function Connect-DD {
 
     begin {
         if ($PSVersionTable.PSEdition -ne "Core") {
-            Write-Error "This function has only be tested with PowerShell Core, not with $PSVersionTable.PSEdition" -Category ConnectionError
+            Write-Error "This function has only be tested with PowerShell Core" -Category ConnectionError -ErrorAction Stop
         }
 
         if (!$noconnectcheck) {
             if (-not (Test-Connection -TargetName $DDfqdn -TCPPort 443 -Quiet)){
                 Write-Error "Unable to connect to DataDomain: $DDfqdn." -Category ConnectionError
-                exit
                }
         }
     } #END BEGIN
@@ -203,8 +202,7 @@ function Get-DDAlert {
     )
     begin {
         if ($PSVersionTable.PSEdition -ne "Core") {
-            Write-Error "This function has only be tested with PowerShell Core, not with $PSVersionTable.PSEdition" -Category ConnectionError
-        }
+            Write-Error "This function has only be tested with PowerShell Core" -Category ConnectionError -ErrorAction Stop       }
         if (-not (Test-Connection -TargetName $DDfqdn -TCPPort 443 -Quiet)){
             Write-Error "Unable to connect to DataDomain: $DDfqdn." -Category ConnectionError
             exit
