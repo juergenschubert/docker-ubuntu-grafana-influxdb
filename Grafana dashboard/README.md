@@ -32,8 +32,10 @@ Click on import.
 uplad JSON file.  
 ![Screen Shot 2021-04-29 at 08 18 09](https://user-images.githubusercontent.com/17120076/116509389-7a5df880-a8c3-11eb-8df4-bbdc2d4c9c18.png)
 
+
 Choose the right JSON file.    
 ![Screen Shot 2021-04-29 at 08 19 25](https://user-images.githubusercontent.com/17120076/116509472-a5e0e300-a8c3-11eb-828f-52aef2a5f6f9.png)
+
 
 Change / blank the uid and choose the folder - hit 
 ![Screen Shot 2021-04-29 at 08 20 36](https://user-images.githubusercontent.com/17120076/116509574-d9237200-a8c3-11eb-8ac1-6efbf177261e.png)
