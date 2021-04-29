@@ -34,7 +34,7 @@ Here you do find the latest PowerShell cndlet which will query the DD and publis
 **More will come - let me know what you need**
 # Tips and tricks
 
-## How to add DDALERT DB manual on your InfluxDB?
+## How to add DDALERT DB on your InfluxDB?
 start a ssh and go to your InfluxDB.   
 start the influxdb cli with:   
 >influx  
