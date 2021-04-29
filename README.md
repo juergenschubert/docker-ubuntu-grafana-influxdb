@@ -43,6 +43,9 @@ start a ssh and go to your InfluxDB.
 start the influxdb cli with:   
 >influx  
 >CREATE DATABASE DDALERT
+You can access the cli with Docker very easy. 
+![image](https://user-images.githubusercontent.com/17120076/116521851-c7969600-a8d4-11eb-8ce9-ac930a647172.png)
+
 
 ![Screen Shot 2021-04-29 at 09 36 36](https://user-images.githubusercontent.com/17120076/116517030-a632ab80-a8ce-11eb-9679-37e3a237103a.png)   
 ![Screen Shot 2021-04-29 at 09 36 46](https://user-images.githubusercontent.com/17120076/116517045-aa5ec900-a8ce-11eb-9ba8-67d3b11801b8.png)   
