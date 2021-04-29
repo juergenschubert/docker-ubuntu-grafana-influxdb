@@ -14,12 +14,19 @@ DataDomain
    - This is the Dashboard you should use to visualize your DD data. 
 
 Please make sure that you create a folder in Granfa with the same name as some references are not dynamic, just bound to a search a folder name.
+# Hot to access your Grafana docker instance?  
+## Access your Grafana GUI. 
+http://localhost:3003
+![Screen Shot 2021-04-29 at 13 07 52](https://user-images.githubusercontent.com/17120076/116541671-0be16080-a8ec-11eb-8be8-567e49181897.png)   
+
+## Login with root/root
+![Screen Shot 2021-04-29 at 13 09 43](https://user-images.githubusercontent.com/17120076/116541783-303d3d00-a8ec-11eb-86e9-46cd700dacf8.png)
 
 # Steps to create the folder structure  
 ### Go to manage your dashboard  
 ![Screen Shot 2021-04-29 at 08 09 29](https://user-images.githubusercontent.com/17120076/116508774-5c43c880-a8c2-11eb-9d6e-16bd5147c702.png)
 
-#### Click on New Folder  
+#### Click on New Folder - DataDomain
 ![Screen Shot 2021-04-29 at 08 11 21](https://user-images.githubusercontent.com/17120076/116508855-86958600-a8c2-11eb-8410-73ab31e0a287.png)
 
 ### Name the folder like DataDomain or DataDomain - Streaming Demo  
