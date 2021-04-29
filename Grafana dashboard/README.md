@@ -41,23 +41,23 @@ Change / blank the uid and choose the folder - hit
 Make sure you have choose the right folder to place the dashboard and wiped out the uid.   
 ![Screen Shot 2021-04-29 at 08 20 47](https://user-images.githubusercontent.com/17120076/116509580-dcb6f900-a8c3-11eb-8f94-5e3945241077.png)
 
-you should see the dashboard 
-#let's add the datasource
-navigate to the Data Sources   
+you should see the dashboard  
+#let's add the datasource.  
+navigate to the Data Sources       
 ![Screen Shot 2021-04-29 at 08 24 36](https://user-images.githubusercontent.com/17120076/116510127-b6458d80-a8c4-11eb-9267-5ac204ea66fb.png)
 
-Add a data source
+Add a data source.   
 ![Screen Shot 2021-04-29 at 08 24 53](https://user-images.githubusercontent.com/17120076/116510149-bfcef580-a8c4-11eb-975c-ae250b21674c.png)
 
-Search for Influxdb
+Search for Influxdb.   
 ![Screen Shot 2021-04-29 at 08 25 03](https://user-images.githubusercontent.com/17120076/116510181-ca898a80-a8c4-11eb-97cb-1db4284367d1.png)
 click on the datasource
 
-Add configuration and watch out that the very first time InfluxDB does not have DDALERT or any other DB available. So the add will fail
+Add configuration and watch out that the very first time InfluxDB does not have DDALERT or any other DB available. So the add will fail.   
 
 ![Screen Shot 2021-04-29 at 08 29 28](https://user-images.githubusercontent.com/17120076/116510331-0ae90880-a8c5-11eb-99fc-6315989df5b6.png)
 
-Configure the HTTP information to localhost:8086
+Configure the HTTP information to localhost:8086.   
 ![Screen Shot 2021-04-29 at 08 25 38](https://user-images.githubusercontent.com/17120076/116510410-26ecaa00-a8c5-11eb-9046-2ea3b7b32c4f.png)
 
 Configure the InfluxDB details as user and database. As the DB you are choosing does not exist this will fail !!!
