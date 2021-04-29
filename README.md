@@ -9,7 +9,7 @@ Visualize the DD Alerts of your DataDomain.
 Visualize the capacity of your DataDomain.  
 ![DDGrafana-capacity](https://user-images.githubusercontent.com/17120076/116391358-5943cc00-a81f-11eb-8bc3-5bd4878a1625.gif). 
 
-Visualize the streams of your DataDomain.
+Visualize the streams of your DataDomain
 ![DDGrafana-streams](https://user-images.githubusercontent.com/17120076/116391883-01f22b80-a820-11eb-95f5-e02b007dd085.gif). 
 
 
@@ -17,17 +17,15 @@ I am using a Docker file with Grafana and InfluxDB which is:
 https://hub.docker.com/r/philhawthorne/docker-influxdb-grafana/  
 You find how to start and how to use on his page
 
-The highlevel concept is to deploy Grafana and InfluxDB with docker, import the DataDomain Grafana dashboards and use the PowerShell cmdlet to get live data from your DataDomain into InfluxDB which is the datasource for Grafana.
-
+The highlevel concept is to deploy Grafana and InfluxDB with docker, import the DataDomain Grafana dashboards and use the PowerShell cmdlet to get live data from your DataDomain into InfluxDB which is the datasource for Grafana.    
+The folder in this github repo will conatain the following information.   
 ## Grafana and InfluxDB  
-This will contain the docker file if you wanna create your own instead of consuming https://hub.docker.com/r/philhawthorne/docker-influxdb-grafana/    
-## Grafana dashboard.  
+This will contain the docker file if you wanna create your own instead of consuming https://hub.docker.com/r/philhawthorne/docker-influxdb-grafana/.                   
+## Grafana dashboard  
 Here you do find the latest and greatest Grafana dashboard. 
 
-## PowerShell cmdlet.  
-Here you do find the latest PowerShell cndlet which will query the DD and publish the result to InfluxDB
-
-
+## PowerShell cmdlet  
+Here you do find the latest PowerShell cndlet which will query the DD and publish the result to InfluxDB.             
 
 **More will come and I am happy to get "requests" **
 
