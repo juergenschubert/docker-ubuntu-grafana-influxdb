@@ -10,7 +10,7 @@ Visualize the capacity of your DataDomain.
 ![DDGrafana-capacity](https://user-images.githubusercontent.com/17120076/116557278-96cb5680-a8fe-11eb-82d4-fb0525fcc041.gif)
 
 Visualize the performance/troughput of your DataDomain.  
-![DDGrafana-performance](https://user-images.githubusercontent.com/17120076/116557680-f4f83980-a8fe-11eb-860c-2ca8d6fa331c.gif)
+![DDGrafana-performance](https://user-images.githubusercontent.com/17120076/116558299-91224080-a8ff-11eb-81f0-19f5430ec3ac.gif)
 
 Visualize the streams of your DataDomain
 ![DDGrafana-streams](https://user-images.githubusercontent.com/17120076/116391883-01f22b80-a820-11eb-95f5-e02b007dd085.gif) 
