@@ -38,6 +38,7 @@ start a ssh and go to your InfluxDB.
 start the influxdb cli with:   
 >influx   
 >CREATE RETENTION POLICY retention_ddalert ON DDALERT DURATION 4w REPLICATION 1  
+
 where DDALERT is the DB and DURATION the retention time.  
 
 ![Screen Shot 2021-04-29 at 09 36 36](https://user-images.githubusercontent.com/17120076/116517030-a632ab80-a8ce-11eb-9679-37e3a237103a.png)   
@@ -51,8 +52,8 @@ start the influxdb cli with:
 >influx  
 >CREATE DATABASE DDALERT
 
-![Screen Shot 2021-04-29 at 09 36 36](https://user-images.githubusercontent.com/17120076/116517030-a632ab80-a8ce-11eb-9679-37e3a237103a.png). ![Screen Shot 2021-04-29 at 09 36 46](https://user-images.githubusercontent.com/17120076/116517045-aa5ec900-a8ce-11eb-9ba8-67d3b11801b8.png)  
-![Uploading Screen Shot 2021-04-29 at 09.39.45.png…]()      
+![Screen Shot 2021-04-29 at 09 36 36](https://user-images.githubusercontent.com/17120076/116517030-a632ab80-a8ce-11eb-9679-37e3a237103a.png)    
+![Screen Shot 2021-04-29 at 09 36 46](https://user-images.githubusercontent.com/17120076/116517045-aa5ec900-a8ce-11eb-9ba8-67d3b11801b8.png)      
 ![Screen Shot 2021-04-29 at 09 41 08](https://user-images.githubusercontent.com/17120076/116517429-3bce3b00-a8cf-11eb-9958-c8686a2ef160.png)   
 ![Screen Shot 2021-04-29 at 09 42 11](https://user-images.githubusercontent.com/17120076/116517437-3e309500-a8cf-11eb-8f8d-34761a0076ff.png)      
 
