@@ -9,10 +9,10 @@ DataDomain
 Please make sure that you create bost folder in Granfa with the same name as some references are not dynamic, just bound to a serach a folder name.
 
 # Steps
-Go to manage your dashboard. 
+Go to manage your dashboard  
 ![Screen Shot 2021-04-29 at 08 09 29](https://user-images.githubusercontent.com/17120076/116508774-5c43c880-a8c2-11eb-9d6e-16bd5147c702.png)
 
-Click on New Folder. 
+Click on New Folder  
 ![Screen Shot 2021-04-29 at 08 11 21](https://user-images.githubusercontent.com/17120076/116508855-86958600-a8c2-11eb-8410-73ab31e0a287.png)
 
 and give it a name like DataDomain or DataDomain - Streaming Demo  
