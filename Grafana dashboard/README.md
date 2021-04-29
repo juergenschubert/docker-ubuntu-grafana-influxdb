@@ -61,6 +61,9 @@ Configure the InfluxDB details as user and database. As the DB you are choosing 
 ### Name the folder like DataDomain or DataDomain - Streaming Demo  
 ![Screen Shot 2021-04-29 at 08 11 56](https://user-images.githubusercontent.com/17120076/116508911-a0cf6400-a8c2-11eb-8172-e02f03cba08c.png)
 
+No need to create a Dashboard as we will import it!  
+![Screen Shot 2021-04-29 at 13 26 36](https://user-images.githubusercontent.com/17120076/116543755-8f03b600-a8ee-11eb-8709-fd658645c33e.png)
+
 
 # Steps to import and move the Grafana Dashboards
 make sure you have downloaded both folders inside **Grafana dashboard** and the dashboard inside the folder.  
