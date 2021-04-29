@@ -36,8 +36,7 @@ uplad JSON file.
 Choose the right JSON file.    
 ![Screen Shot 2021-04-29 at 08 19 25](https://user-images.githubusercontent.com/17120076/116509472-a5e0e300-a8c3-11eb-828f-52aef2a5f6f9.png)
 
-
-Change / blank the uid and choose the folder - hit 
+Change / blank out the **uid** and choose the folder    
 ![Screen Shot 2021-04-29 at 08 20 36](https://user-images.githubusercontent.com/17120076/116509574-d9237200-a8c3-11eb-8ac1-6efbf177261e.png)
 
 Make sure you have choose the right folder to place the dashboard and wiped out the uid.   
