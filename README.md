@@ -20,11 +20,11 @@ You find how to start and how to use it on his page.
 If you where using a **Windows PC**, install the Docker Desktop first.
 
 ensure that you have the following both directories ready to be used for Grafana and InfluxDB config and database storage:  
-C:\Users\schubj2\Documents\grafana-influx\influxdb     
-C:\Users\schubj2\Documents\grafana-influx\grafana   
+>C:\Users\schubj2\Documents\grafana-influx\influxdb     
+>C:\Users\schubj2\Documents\grafana-influx\grafana   
 
 Windows terminal/CLI
-docker run -d --name docker-influxdb-grafana -p 3003:3003 -p 3004:8003 -p 8086:8086 -v C:\Users\schubj2\Documents\grafana-influx\influxdb:/var/lib/influxdb -v C:\Users\schubj2\Documents\grafana-influx\grafana:/var/lib/grafana philhawthorne/docker-influxdb-grafana:latest
+>docker run -d --name docker-influxdb-grafana -p 3003:3003 -p 3004:8003 -p 8086:8086 -v C:\Users\schubj2\Documents\grafana-influx\influxdb:/var/lib/influxdb -v C:\Users\schubj2\Documents\grafana-influx\grafana:/var/lib/grafana philhawthorne/docker-influxdb-grafana:latest
 
 
 **Why Grafana and InfluxDB**?   
