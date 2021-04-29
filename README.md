@@ -33,9 +33,9 @@ Here you do find the latest PowerShell cndlet which will query the DD and publis
 **More will come and I am happy to get "requests" **
 
 # How to add retention policies to your InfluxDB?
-start a ssh and go to your InfluxDB. 
-start the influxdb cli with
->#influx   
+start a ssh and go to your InfluxDB.   
+start the influxdb cli with:   
+>influx   
 >CREATE RETENTION POLICY retention_ddalert ON DDALERT DURATION 4w REPLICATION 1  
 
 where DDALERT is the DB and DURATION the retention time.  
