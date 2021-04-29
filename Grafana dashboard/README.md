@@ -5,7 +5,7 @@ alerts get updated today but this will change. Keep updating yourself.
 ## streaming data dashboard
 https://github.com/juergenschubert/docker-ubuntu-grafana-influxdb
 
-# This is the documentation on how to import the Dashboard.
+# This is the documentation on how to import these dashboards.
 
 As of today, there are two types of Dashboards
 DataDomain - Streaming Demo  
