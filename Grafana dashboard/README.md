@@ -22,16 +22,6 @@ http://localhost:3003
 ## Login with root/root
 ![Screen Shot 2021-04-29 at 13 09 43](https://user-images.githubusercontent.com/17120076/116541783-303d3d00-a8ec-11eb-86e9-46cd700dacf8.png)
 
-# Steps to create the folder structure  
-### Go to manage your dashboard  
-![Screen Shot 2021-04-29 at 08 09 29](https://user-images.githubusercontent.com/17120076/116508774-5c43c880-a8c2-11eb-9d6e-16bd5147c702.png)
-
-#### Click on New Folder - DataDomain
-![Screen Shot 2021-04-29 at 08 11 21](https://user-images.githubusercontent.com/17120076/116508855-86958600-a8c2-11eb-8410-73ab31e0a287.png)
-
-### Name the folder like DataDomain or DataDomain - Streaming Demo  
-![Screen Shot 2021-04-29 at 08 11 56](https://user-images.githubusercontent.com/17120076/116508911-a0cf6400-a8c2-11eb-8172-e02f03cba08c.png)
-
 # let's add the data source.  
 navigate to the Data Sources       
 ![Screen Shot 2021-04-29 at 08 24 36](https://user-images.githubusercontent.com/17120076/116510127-b6458d80-a8c4-11eb-9267-5ac204ea66fb.png)
@@ -60,7 +50,18 @@ Configure the InfluxDB details as user and database. As the DB you are choosing 
 ![Screen Shot 2021-04-29 at 08 26 40](https://user-images.githubusercontent.com/17120076/116510497-4e437700-a8c5-11eb-8202-e5bf89b97570.png)   
 ![Screen Shot 2021-04-29 at 08 25 57](https://user-images.githubusercontent.com/17120076/116510519-53a0c180-a8c5-11eb-9a15-7765aa85c724.png)   
 ![Screen Shot 2021-04-29 at 08 32 18](https://user-images.githubusercontent.com/17120076/116510588-6fa46300-a8c5-11eb-9dc4-0581d9a69a67.png)   
- 
+
+# Steps to create the folder structure  
+### Go to manage your dashboard  
+![Screen Shot 2021-04-29 at 08 09 29](https://user-images.githubusercontent.com/17120076/116508774-5c43c880-a8c2-11eb-9d6e-16bd5147c702.png)
+
+#### Click on New Folder - DataDomain
+![Screen Shot 2021-04-29 at 08 11 21](https://user-images.githubusercontent.com/17120076/116508855-86958600-a8c2-11eb-8410-73ab31e0a287.png)
+
+### Name the folder like DataDomain or DataDomain - Streaming Demo  
+![Screen Shot 2021-04-29 at 08 11 56](https://user-images.githubusercontent.com/17120076/116508911-a0cf6400-a8c2-11eb-8172-e02f03cba08c.png)
+
+
 # Steps to import and move the Grafana Dashboards
 make sure you have downloaded both folders inside **Grafana dashboard** and the dashboard inside the folder.  
 The folders are DataDomain and DataDomain - Streaming Demo. 
