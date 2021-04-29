@@ -27,7 +27,7 @@ There are several command option you do get by
 #dump the measurement
 >Get-DDAlert  -DDfqdn $DD -DDAuthTokenValue $DDtoken -dumpmeasurement -InfluxDBServer 'localhost' -InfluxDB 'DDALERT' -DDR 'DD4200' -DDLocation 'Hamburg' -DDserialno 'CKM0013370252' 
 
->insert DDAlertList,DDR="DD4200",DDLocation="Hamburg",serialno="CKM0013370252" activealert=1,totalalert=2 1619632006
+>insert DDAlertList,DDR="DD4200",DDLocation="Hamburg",serialno="CKM0013370252" activealert=1,totalalert=2 1619632006000000000
 
 
 #add a measurement to InfluxDB
