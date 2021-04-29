@@ -32,8 +32,19 @@ Here you do find the latest and greatest Grafana dashboard.
 Here you do find the latest PowerShell cndlet which will query the DD and publish the result to InfluxDB.             
 
 **More will come - let me know what you need**
+# Tips and tricks
 
-# How to add retention policies to your InfluxDB?
+## How to add DDALERT DB manual on your InfluxDB?
+start a ssh and go to your InfluxDB.   
+start the influxdb cli with:   
+>influx  
+>CREATE DATABASE DDALERT
+
+![Screen Shot 2021-04-29 at 09 36 36](https://user-images.githubusercontent.com/17120076/116517030-a632ab80-a8ce-11eb-9679-37e3a237103a.png)   
+![Screen Shot 2021-04-29 at 09 36 46](https://user-images.githubusercontent.com/17120076/116517045-aa5ec900-a8ce-11eb-9ba8-67d3b11801b8.png)   
+![Screen Shot 2021-04-29 at 09 39 45](https://user-images.githubusercontent.com/17120076/116517410-340e9680-a8cf-11eb-8d9b-5c4a3d5b0043.png)    
+
+## How to add retention policies to your InfluxDB?
 start a ssh and go to your InfluxDB.   
 start the influxdb cli with:   
 >influx   
@@ -45,17 +56,5 @@ where DDALERT is the DB and DURATION the retention time.
 ![Screen Shot 2021-04-29 at 09 36 46](https://user-images.githubusercontent.com/17120076/116517045-aa5ec900-a8ce-11eb-9ba8-67d3b11801b8.png)      
 ![Screen Shot 2021-04-29 at 09 41 08](https://user-images.githubusercontent.com/17120076/116517429-3bce3b00-a8cf-11eb-9958-c8686a2ef160.png)   
 ![Screen Shot 2021-04-29 at 09 42 11](https://user-images.githubusercontent.com/17120076/116517437-3e309500-a8cf-11eb-8f8d-34761a0076ff.png)      
-
-# How to add DDALERT DB manual on your InfluxDB?
-start a ssh and go to your InfluxDB.   
-start the influxdb cli with:   
->influx  
->CREATE DATABASE DDALERT
-
-![Screen Shot 2021-04-29 at 09 36 36](https://user-images.githubusercontent.com/17120076/116517030-a632ab80-a8ce-11eb-9679-37e3a237103a.png)   
-![Screen Shot 2021-04-29 at 09 36 46](https://user-images.githubusercontent.com/17120076/116517045-aa5ec900-a8ce-11eb-9ba8-67d3b11801b8.png)   
-![Screen Shot 2021-04-29 at 09 39 45](https://user-images.githubusercontent.com/17120076/116517410-340e9680-a8cf-11eb-8d9b-5c4a3d5b0043.png)    
-
-
 
 
