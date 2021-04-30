@@ -291,7 +291,7 @@ function  Add-DDSystemCapacity2InfluxDB {
             Write-Host "StatusCode:" $_.Exception.Response.StatusCode.value__   -fore red
             Write-Host "StatusDescription:" $_.Exception.Response.StatusDescription  -fore red
         }
-        Write-Host "physical capacity"
+        Write-Verbose "physical capacity"
         Write-Verbose "[DEBUG] Get physical capacity metrics from DD "
         Write-Verbose "[DEBUG] Physical Capacity - response body"
         write-verbose "/rest/v2.0/dd-systems/0/stats/capacity?tier=$($DDTier) response"
@@ -461,7 +461,7 @@ function  Add-DDSystemCapacity2InfluxDB {
     # build body for InfluxDB
     # body for physical capa
                 $bodyaddmeasurement= "$($InfluxMeasurementcapa ) $($influxtime)"
-                $bodyaddmeasurement1 ="$( $InfluxMeasurementdedupe) $($influxtime)"
+                $bodyaddmeasurement1 ="$($InfluxMeasurementdedupe) $($influxtime)"
                 # write InfluxDB 
                 try {
                     $influxresponse = Invoke-RestMethod "http://$($InfluxDBServer):8086/write?db=$($InfluxDB)&precision=ns" `
@@ -473,7 +473,7 @@ function  Add-DDSystemCapacity2InfluxDB {
                     Write-Host "StatusCode:" $_.Exception.Response.StatusCode.value__   -fore red
                     Write-Host "StatusDescription:" $_.Exception.Response.StatusDescription  -fore red
                 } # End Try Rest
-                write-host "wrote:  $bodyaddmeasurement"
+                write-host "wrote physical capa:  $bodyaddmeasurement"
                 write-host "to InfluxDB: $InfluxDB "
                               # write InfluxDB 
                 try {
@@ -486,7 +486,7 @@ function  Add-DDSystemCapacity2InfluxDB {
                     Write-Host "StatusCode:" $_.Exception.Response.StatusCode.value__   -fore red
                     Write-Host "StatusDescription:" $_.Exception.Response.StatusDescription  -fore red
                 } # End Try Rest
-                write-host "wrote:  $bodyaddmeasurement1"
+                write-host "wrote dedupe:  $bodyaddmeasurement1"
                 write-host "to InfluxDB: $InfluxDB "
 
     # body for logical capa
@@ -505,7 +505,7 @@ function  Add-DDSystemCapacity2InfluxDB {
                     Write-Host "StatusCode:" $_.Exception.Response.StatusCode.value__   -fore red
                     Write-Host "StatusDescription:" $_.Exception.Response.StatusDescription  -fore red
                 } # End Try Rest
-                write-host "wrote:  $bodyaddmeasurement2"
+                write-host "wrote logical capa:  $bodyaddmeasurement2"
                 write-host "to InfluxDB: $InfluxDB "
             } #End if add2InfluxDB
     } #End Process
