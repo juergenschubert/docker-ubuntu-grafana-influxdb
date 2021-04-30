@@ -52,18 +52,18 @@ function Connect-DD {
     )
 
     begin {
-        if ($PSVersionTable.PSEdition -eq "Core") { 
-            if (!$noconnectcheck) {
+        if (!$noconnectcheck) {
+            if ($PSVersionTable.PSEdition -eq "Core") { 
                 if (-not (Test-Connection -TargetName $DDfqdn -TCPPort 443 -Quiet)){
                     Write-Error "Unable to connect to DataDomain: $DDfqdn." -Category ConnectionError
-                   }
-             } 
-        if ($PSVersionTable.PSEdition -eq "Desktop") {if (!$noconnectcheck) {
-            if (-not (Test-NetConnection $DD -Port 443 -InformationLevel Quiet)){
-                Write-Error "Unable to connect to DataDomain: $DDfqdn." -Category ConnectionError
-               }      
-            } 
-
+                   } #End Test-Connection
+            } #End $PSVersionTable.PSEdition
+            if ($PSVersionTable.PSEdition -eq "Desktop") {
+                if (-not (Test-NetConnection $DD -Port 443 -InformationLevel Quiet)){
+                    Write-Error "Unable to connect to DataDomain: $DDfqdn." -Category ConnectionError
+                } #End Test-NetConnection      
+            } #End $PSVersionTable.PSEdition
+        } #End $noconnectcheck
     } #END BEGIN
 
     process {
