@@ -15,7 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 28,
+  "id": 7,
+  "iteration": 1619794435196,
   "links": [
     {
       "icon": "external link",
@@ -34,7 +35,7 @@
         },
         "overrides": []
       },
-      "folderId": 10,
+      "folderId": 6,
       "gridPos": {
         "h": 8,
         "w": 6,
@@ -158,7 +159,13 @@
               }
             ]
           ],
-          "tags": []
+          "tags": [
+            {
+              "key": "serialno",
+              "operator": "=~",
+              "value": "/^$serialno$/"
+            }
+          ]
         }
       ],
       "timeFrom": null,
@@ -230,7 +237,13 @@
               }
             ]
           ],
-          "tags": []
+          "tags": [
+            {
+              "key": "serialno",
+              "operator": "=~",
+              "value": "/^$serialno$/"
+            }
+          ]
         }
       ],
       "timeFrom": null,
@@ -321,7 +334,13 @@
               }
             ]
           ],
-          "tags": []
+          "tags": [
+            {
+              "key": "serialno",
+              "operator": "=~",
+              "value": "/^$serialno$/"
+            }
+          ]
         },
         {
           "alias": "Behobene Fehler",
@@ -364,6 +383,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1036",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -372,6 +392,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1037",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -393,7 +414,34 @@
     "DD"
   ],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "\"CKM0013370252\"",
+          "value": "\"CKM0013370252\""
+        },
+        "datasource": "InfluxDB - DDALERT",
+        "definition": "",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "serialno",
+        "options": [],
+        "query": "SHOW TAG VALUES ON \"DDALERT\" WITH KEY = \"serialno\"",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
   },
   "time": {
     "from": "now-6h",
@@ -403,5 +451,5 @@
   "timezone": "",
   "title": "DataDomain - Alert",
   "uid": "QTsNGB9Gz",
-  "version": 1
+  "version": 5
 }
