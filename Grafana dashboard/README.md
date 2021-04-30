@@ -28,7 +28,8 @@ navigate to the Data Sources
 
 Add a data source.   
 Naming convention is essential 
-Please choose InfluxDB - DDALERT for the first report. 
+Please choose InfluxDB - DDALERT for the first report.   
+InfluxDB-DDSYSTEMCAPACITY for the Capacity one.  
 ![Screen Shot 2021-04-29 at 08 24 53](https://user-images.githubusercontent.com/17120076/116510149-bfcef580-a8c4-11eb-975c-ae250b21674c.png)
 
 Search for Influxdb.   
