@@ -390,7 +390,7 @@ function  Add-DDSystemCapacity2InfluxDB {
         $influx_logical_size_TB = ($tbllogical[0].total_size_TB | select -last 1)
         $influx_logical_size_TB = $influx_logical_size_TB.Replace(',', '.');
         $influx_logical_used_TB = ($tbllogical[0].total_used_TB | select -last 1)
-        $influx_logical_used_TB = $influx_logical_used_TB .Replace(',', '.');
+        $influx_logical_used_TB = $influx_logical_used_TB.Replace(',', '.');
         $influx_logical_available_TB = ($tbllogical[0].total_available_TB | select -last 1) 
         $influx_logical_available_TB = $influx_logical_available_TB.Replace(',', '.');
         $InfluxMeasurementlogicalcapa ="TierCapacityUsageLogicalCapacity,DDR=""$($DDR)"",DDLocation=""$($DDLocation)"",serialno=""$($DDserialno)"",tier=""$($influx_tier)"" LogicalCapacityTotal=$($influx_logical_size_TB),LogicalCapacityUsed=$($influx_logical_used_TB),LogicalCapacityavailable=$($influx_logical_available_TB)"
