@@ -382,7 +382,7 @@ function  Add-DDSystemCapacity2InfluxDB {
         $influx_total_available_TB = ($tblphysical[0].total_available_TB | select -last 1)
         $influx_total_available_TB = $influx_total_available_TB.Replace(',', '.');
         $influx_compression_factor = ($tblphysical[0].compression_factor | select -last 1)
-        $influx_compression_factor = $influx_compression_facto.Replace(',', '.');
+        $influx_compression_factor = $influx_compression_factor.Replace(',', '.');
         $InfluxMeasurementcapa ="TierCapacityUsagePhysicalCapacity,DDR=""$($DDR)"",DDLocation=""$($DDLocation)"",serialno=""$($DDserialno)"",tier=""$($influx_tier)"" PhysicalCapacityTotal=$($influx_total_size_TB),PhysicalCapacityUsed=$($influx_total_used_TB),PhysicalCapacityavailable=$($influx_total_available_TB)"
         $InfluxMeasurementdedupe ="TierCapacityUsageCompressionFactor,DDR=""$($DDR)"",DDLocation=""$($DDLocation)"",serialno=""$($DDserialno)"",tier=""$($influx_tier)"" CompressionFactor=$($influx_compression_factor)"
         #logical
