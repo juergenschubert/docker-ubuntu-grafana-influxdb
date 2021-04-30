@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 5,
+  "id": 22,
   "links": [
     {
       "icon": "external link",
@@ -34,7 +34,7 @@
         },
         "overrides": []
       },
-      "folderId": 3,
+      "folderId": 26,
       "gridPos": {
         "h": 8,
         "w": 6,
@@ -45,12 +45,12 @@
       "id": 2,
       "limit": 10,
       "pluginVersion": "7.2.0",
-      "query": "DataDomain",
+      "query": "",
       "recent": false,
       "search": true,
       "starred": false,
       "tags": [
-        "DD Dashboard"
+        "DD"
       ],
       "targets": [
         {
@@ -104,16 +104,16 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "super-light-red",
+                "color": "green",
                 "value": null
               },
               {
-                "color": "light-red",
-                "value": 4
+                "color": "yellow",
+                "value": 40
               },
               {
                 "color": "dark-red",
-                "value": 5
+                "value": 80
               }
             ]
           }
@@ -122,17 +122,17 @@
       },
       "gridPos": {
         "h": 8,
-        "w": 7,
+        "w": 3,
         "x": 6,
         "y": 0
       },
-      "id": 7,
+      "id": 4,
       "options": {
         "displayMode": "lcd",
         "orientation": "vertical",
         "reduceOptions": {
           "calcs": [
-            "last"
+            "lastNotNull"
           ],
           "fields": "",
           "values": false
@@ -153,78 +153,6 @@
               {
                 "params": [
                   "activealert"
-                ],
-                "type": "field"
-              }
-            ]
-          ],
-          "tags": []
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Active Alerts on DD",
-      "type": "bargauge"
-    },
-    {
-      "datasource": "InfluxDB - DDALERT",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "super-light-red",
-                "value": null
-              },
-              {
-                "color": "light-red",
-                "value": 4
-              },
-              {
-                "color": "dark-red",
-                "value": 5
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 7,
-        "x": 13,
-        "y": 0
-      },
-      "id": 4,
-      "options": {
-        "displayMode": "lcd",
-        "orientation": "vertical",
-        "reduceOptions": {
-          "calcs": [
-            "last"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showUnfilled": true
-      },
-      "pluginVersion": "7.2.0",
-      "targets": [
-        {
-          "groupBy": [],
-          "measurement": "DDAlertList",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "totalalert"
                 ],
                 "type": "field"
               }
@@ -239,11 +167,7 @@
       "type": "bargauge"
     },
     {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "InfluxDB - DDALERT",
+      "datasource": "InfluxDB-DDSYSTEMCAPACITY",
       "fieldConfig": {
         "defaults": {
           "custom": {},
@@ -256,57 +180,40 @@
                 "value": null
               },
               {
-                "color": "yellow",
-                "value": 4
-              },
-              {
-                "color": "dark-red",
-                "value": 5
+                "color": "red",
+                "value": 80
               }
             ]
           }
         },
         "overrides": []
       },
-      "fill": 1,
-      "fillGradient": 0,
       "gridPos": {
-        "h": 7,
-        "w": 20,
-        "x": 0,
-        "y": 8
+        "h": 8,
+        "w": 8,
+        "x": 9,
+        "y": 0
       },
-      "hiddenSeries": false,
       "id": 8,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
       "options": {
-        "alertThreshold": true
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
       },
-      "percentage": false,
       "pluginVersion": "7.2.0",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
       "targets": [
         {
-          "alias": "Aktive Fehler",
           "groupBy": [],
-          "measurement": "DDAlertList",
+          "measurement": "TierCapacityUsageCompressionFactor",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -315,82 +222,101 @@
             [
               {
                 "params": [
-                  "activealert"
+                  "CompressionFactor"
                 ],
                 "type": "field"
               }
             ]
           ],
           "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Dedupe",
+      "type": "stat"
+    },
+    {
+      "datasource": "InfluxDB-DDSYSTEMCAPACITY",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "decimals": 2,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": null
+              },
+              {
+                "color": "dark-green",
+                "value": 80
+              }
+            ]
+          }
         },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 7,
+        "x": 17,
+        "y": 0
+      },
+      "id": 10,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.2.0",
+      "targets": [
         {
-          "alias": "Behobene Fehler",
           "groupBy": [],
-          "measurement": "DDAlertList",
+          "measurement": "TierCapacityUsagePhysicalCapacity",
           "orderByTime": "ASC",
           "policy": "default",
-          "refId": "B",
+          "refId": "A",
           "resultFormat": "time_series",
           "select": [
             [
               {
                 "params": [
-                  "totalalert"
+                  "PhysicalCapacityTotal"
                 ],
                 "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
               }
             ]
           ],
           "tags": []
         }
       ],
-      "thresholds": [],
       "timeFrom": null,
-      "timeRegions": [],
       "timeShift": null,
-      "title": "Alerts over time",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
+      "title": "Used Capacity (TB)",
+      "type": "stat"
     }
   ],
   "refresh": false,
   "schemaVersion": 26,
   "style": "dark",
   "tags": [
-    "DD"
+    "DD Dashboard"
   ],
   "templating": {
     "list": []
@@ -401,7 +327,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "DataDomain - Alert",
-  "uid": "89GoCBXMz",
-  "version": 3
+  "title": "DataDomain - Dashboard",
+  "uid": "b1UAguuMz",
+  "version": 11
 }
