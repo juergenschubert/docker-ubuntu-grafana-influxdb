@@ -61,6 +61,7 @@ function Connect-DD {
                     Write-Error "Unable to connect to DataDomain: $DDfqdn." -Category ConnectionError -ErrorAction Stop
                    } #End Test-Connection
             } #End $PSVersionTable.PSEdition
+        } #End noconnectcheck
     } #END BEGIN
 
     process {
