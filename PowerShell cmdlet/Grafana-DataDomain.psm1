@@ -55,12 +55,12 @@ function Connect-DD {
         if (!$noconnectcheck) {
             if ($PSVersionTable.PSEdition -eq "Core") { 
                 if (-not (Test-Connection -TargetName $DDfqdn -TCPPort 443 -Quiet)){
-                    Write-Error "Unable to connect to DataDomain: $DDfqdn." -Category ConnectionError
+                    Write-Error "Unable to connect to DataDomain: $DDfqdn." -Category ConnectionError -ErrorAction Stop
                    } #End Test-Connection
             } #End $PSVersionTable.PSEdition
             if ($PSVersionTable.PSEdition -eq "Desktop") {
                 if (-not (Test-NetConnection $DD -Port 443 -InformationLevel Quiet)){
-                    Write-Error "Unable to connect to DataDomain: $DDfqdn." -Category ConnectionError
+                    Write-Error "Unable to connect to DataDomain: $DDfqdn." -Category ConnectionError -ErrorAction Stop
                 } #End Test-NetConnection      
             } #End $PSVersionTable.PSEdition
         } #End $noconnectcheck
@@ -82,7 +82,7 @@ function Connect-DD {
         Write-Verbose "[DD] FQDN $DDfqdn"
         #LOGIN TO DD REST API
         Write-Verbose "[DD] Login to get the access token"
-           try {
+        try {
             $response = Invoke-RestMethod -uri "https://$($RestUrl):3009/rest/v1.0/auth" `
             -Method 'POST' `
             -ContentType 'application/json' `
@@ -90,10 +90,9 @@ function Connect-DD {
             -SkipCertificateCheck `
             -ResponseHeadersVariable Headers
         } catch {
-
             Write-Host "[ERROR]FAILED to fetch auth token from $RestUrl"  -fore red
             Write-Host "StatusCode:" $_.Exception.Response.StatusCode.value__   -fore red
-            Write-Host "StatusDescription:" $_.Exception.Response.StatusDescription  -fore red
+            Write-Host "StatusDescription:" $_.Exception.Response.StatusDescription  -fore red -ErrorAction Stop
         }
         $DDAutoTokenValue = $Headers['X-DD-AUTH-TOKEN'][0]
         $mytoken = @{
