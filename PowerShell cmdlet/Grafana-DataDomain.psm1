@@ -375,17 +375,24 @@ function  Add-DDSystemCapacity2InfluxDB {
         #prepare the data
         #physical
         $influx_tier = ($tblphysical[0].Tier | select -last 1)
-        [float]$influx_total_size_TB = ($tblphysical[0].total_size_TB | select -last 1)
-        [float]$influx_total_used_TB = ($tblphysical[0].total_used_TB | select -last 1)
-        [float]$influx_total_available_TB = ($tblphysical[0].total_available_TB | select -last 1)
-        [float]$influx_compression_factor = ($tblphysical[0].compression_factor | select -last 1)
+        $influx_total_size_TB = ($tblphysical[0].total_size_TB | select -last 1)
+        $influx_total_size_TB = $influx_total_size_TB.Replace(',', '.');
+        $influx_total_used_TB = ($tblphysical[0].total_used_TB | select -last 1)
+        $influx_total_used_TB =  $influx_total_used_TB.Replace(',', '.');
+        $influx_total_available_TB = ($tblphysical[0].total_available_TB | select -last 1)
+        $influx_total_available_TB = $influx_total_available_TB.Replace(',', '.');
+        $influx_compression_factor = ($tblphysical[0].compression_factor | select -last 1)
+        $influx_compression_factor = $influx_compression_facto.Replace(',', '.');
         $InfluxMeasurementcapa ="TierCapacityUsagePhysicalCapacity,DDR=""$($DDR)"",DDLocation=""$($DDLocation)"",serialno=""$($DDserialno)"",tier=""$($influx_tier)"" PhysicalCapacityTotal=$($influx_total_size_TB),PhysicalCapacityUsed=$($influx_total_used_TB),PhysicalCapacityavailable=$($influx_total_available_TB)"
         $InfluxMeasurementdedupe ="TierCapacityUsageCompressionFactor,DDR=""$($DDR)"",DDLocation=""$($DDLocation)"",serialno=""$($DDserialno)"",tier=""$($influx_tier)"" CompressionFactor=$($influx_compression_factor)"
         #logical
         $influx_tier = ($tbllogical[0].Tier | select -last 1)
-        [float]$influx_logical_size_TB = ($tbllogical[0].total_size_TB | select -last 1)
-        [float]$influx_logical_used_TB = ($tbllogical[0].total_used_TB | select -last 1)
-        [float]$influx_logical_available_TB = ($tbllogical[0].total_available_TB | select -last 1) 
+        $influx_logical_size_TB = ($tbllogical[0].total_size_TB | select -last 1)
+        $influx_logical_size_TB = $influx_logical_size_TB.Replace(',', '.');
+        $influx_logical_used_TB = ($tbllogical[0].total_used_TB | select -last 1)
+        $influx_logical_used_TB = $influx_logical_used_TB .Replace(',', '.');
+        $influx_logical_available_TB = ($tbllogical[0].total_available_TB | select -last 1) 
+        $influx_logical_available_TB = $influx_logical_available_TB.Replace(',', '.');
         $InfluxMeasurementlogicalcapa ="TierCapacityUsageLogicalCapacity,DDR=""$($DDR)"",DDLocation=""$($DDLocation)"",serialno=""$($DDserialno)"",tier=""$($influx_tier)"" LogicalCapacityTotal=$($influx_logical_size_TB),LogicalCapacityUsed=$($influx_logical_used_TB),LogicalCapacityavailable=$($influx_logical_available_TB)"
 # dumpmeasurement
         if ($dumpmeasurement) {
