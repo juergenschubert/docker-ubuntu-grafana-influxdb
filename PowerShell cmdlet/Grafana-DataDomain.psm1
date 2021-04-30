@@ -383,8 +383,7 @@ function  Add-DDSystemCapacity2InfluxDB {
         $influx_total_available_TB = $influx_total_available_TB.Replace(',', '.');
         $influx_compression_factor = ($tblphysical[0].compression_factor | select -last 1)
         $influx_compression_factor = $influx_compression_factor.Replace(',', '.');
-        $InfluxMeasurementcapa ="TierCapacityUsagePhysicalCapacity,DDR=""$($DDR)"",DDLocation=""$($DDLocation)"",serialno=""$($DDserialno)"",tier=""$($influx_tier)"" PhysicalCapacityTotal=$($influx_total_size_TB),PhysicalCapacityUsed=$($influx_total_used_TB),PhysicalCapacityavailable=$($influx_total_available_TB)"
-        $InfluxMeasurementdedupe ="TierCapacityUsageCompressionFactor,DDR=""$($DDR)"",DDLocation=""$($DDLocation)"",serialno=""$($DDserialno)"",tier=""$($influx_tier)"" CompressionFactor=$($influx_compression_factor)"
+
         #logical
         $influx_tier = ($tbllogical[0].Tier | select -last 1)
         $influx_logical_size_TB = ($tbllogical[0].total_size_TB | select -last 1)
@@ -393,7 +392,12 @@ function  Add-DDSystemCapacity2InfluxDB {
         $influx_logical_used_TB = $influx_logical_used_TB.Replace(',', '.');
         $influx_logical_available_TB = ($tbllogical[0].total_available_TB | select -last 1) 
         $influx_logical_available_TB = $influx_logical_available_TB.Replace(',', '.');
+
+        $InfluxMeasurementcapa ="TierCapacityUsagePhysicalCapacity,DDR=""$($DDR)"",DDLocation=""$($DDLocation)"",serialno=""$($DDserialno)"",tier=""$($influx_tier)"" PhysicalCapacityTotal=$($influx_total_size_TB),PhysicalCapacityUsed=$($influx_total_used_TB),PhysicalCapacityavailable=$($influx_total_available_TB)"
+        $InfluxMeasurementdedupe ="TierCapacityUsageCompressionFactor,DDR=""$($DDR)"",DDLocation=""$($DDLocation)"",serialno=""$($DDserialno)"",tier=""$($influx_tier)"" CompressionFactor=$($influx_compression_factor)"
+        
         $InfluxMeasurementlogicalcapa ="TierCapacityUsageLogicalCapacity,DDR=""$($DDR)"",DDLocation=""$($DDLocation)"",serialno=""$($DDserialno)"",tier=""$($influx_tier)"" LogicalCapacityTotal=$($influx_logical_size_TB),LogicalCapacityUsed=$($influx_logical_used_TB),LogicalCapacityavailable=$($influx_logical_available_TB)"
+
 # dumpmeasurement
         if ($dumpmeasurement) {
 
@@ -406,7 +410,7 @@ function  Add-DDSystemCapacity2InfluxDB {
             $tblphysical.Columns | ft -AutoSize | write-verbose
             
             write-host "$InfluxMeasurementcapa $influxtime"
-            write-host "$InfluxMeasurementcapa $influxtime"
+            write-host "$InfluxMeasurementdedupe $influxtime"
             #logical capacity
             write-verbose "logical capacity"
             write-verbose "tablephysical ExandProperty"
@@ -421,7 +425,7 @@ function  Add-DDSystemCapacity2InfluxDB {
                 [int64]$influxtimes = Get-Date (Get-Date).ToUniversalTime() -UFormat %s 
                 [int64]$influxtime = $influxtimes * 1000000000
     # Check if the DB does exist
-    # Querey the existing DBs
+    # Query the existing DBs
                 $body = ""
                 try {
                     $influxresponse = Invoke-RestMethod "http://$($InfluxDBServer):8086/query?q=SHOW DATABASES" -Method 'GET' -Headers $headers -Body $body
@@ -442,6 +446,9 @@ function  Add-DDSystemCapacity2InfluxDB {
     # check if the DB exist otherwise create it
                 if ($exist -le 0) {
     # InfluxDB does not exist - create the DB
+    ####################
+    ### create the DB
+    ####################
                     $body = ""
                     try {
                         $influxdbcreateresponse = Invoke-RestMethod "http://$($InfluxDBServer):8086/query?q=CREATE DATABASE ""$($InfluxDB)""" -Method 'GET' -Headers $headers -Body $body
@@ -460,8 +467,10 @@ function  Add-DDSystemCapacity2InfluxDB {
                 $headers.Add("Content-Type", "text/plain")
     # build body for InfluxDB
     # body for physical capa
-                $bodyaddmeasurement= "$($InfluxMeasurementcapa ) $($influxtime)"
-                $bodyaddmeasurement1 ="$($InfluxMeasurementdedupe) $($influxtime)"
+    
+  
+                $bodyaddmeasurement= "$InfluxMeasurementcapa $influxtime"
+                $bodyaddmeasurement1 ="$InfluxMeasurementdedupe $influxtime"
                 # write InfluxDB 
                 try {
                     $influxresponse = Invoke-RestMethod "http://$($InfluxDBServer):8086/write?db=$($InfluxDB)&precision=ns" `
