@@ -52,18 +52,15 @@ function Connect-DD {
     )
 
     begin {
+        if ($PSVersionTable.PSEdition -eq "Desktop") {
+                 Write-Error "This has not been tested with PoweShell Desktop version" -Category ConnectionError -ErrorAction Stop
+                } 
         if (!$noconnectcheck) {
             if ($PSVersionTable.PSEdition -eq "Core") { 
                 if (-not (Test-Connection -TargetName $DDfqdn -TCPPort 443 -Quiet)){
                     Write-Error "Unable to connect to DataDomain: $DDfqdn." -Category ConnectionError -ErrorAction Stop
                    } #End Test-Connection
             } #End $PSVersionTable.PSEdition
-            if ($PSVersionTable.PSEdition -eq "Desktop") {
-                if (-not (Test-NetConnection $DD -Port 443 -InformationLevel Quiet)){
-                    Write-Error "Unable to connect to DataDomain: $DDfqdn." -Category ConnectionError -ErrorAction Stop
-                } #End Test-NetConnection      
-            } #End $PSVersionTable.PSEdition
-        } #End $noconnectcheck
     } #END BEGIN
 
     process {
@@ -90,7 +87,7 @@ function Connect-DD {
             -SkipCertificateCheck `
             -ResponseHeadersVariable Headers
         } catch {
-            Write-Host "[ERROR]FAILED to fetch auth token from $RestUrl"  -fore red
+            Write-Host "[ERROR]FAILED to fetch auth token from $RestUrl with ReST Call"  -fore red
             Write-Host "StatusCode:" $_.Exception.Response.StatusCode.value__   -fore red
             Write-Host "StatusDescription:" $_.Exception.Response.StatusDescription  -fore red -ErrorAction Stop
         }
