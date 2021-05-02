@@ -18,11 +18,11 @@ After the import, it should show you the available commands to be used with
 
 There are two ways to get the data into an influxDB and you have to watch out on each command for switches like  
 
--dumpmeasuremen  
+-dumpmeasurement  
 -add2InfluxDB  
 
 Both do different things. While -add2InfluxDB is dumping into an InfluxDB and is creating the DB if not available
--dumpmeasuremen  - only writing you the insert statement for the InfluxDB cli.  
+-dumpmeasurement  - only writing the insert statment to stdout which you can copy and paste into InfluxDB cli.  
 
 Before we can start we need to connect to our DD like:
 >$DD = '3.66.161.175'  
