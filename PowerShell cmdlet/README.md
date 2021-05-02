@@ -44,5 +44,4 @@ There are several command option you do get by
 #add logical/physical Capacity and Dedupe numbers int InfluxDB
 >Add-DDSystemCapacity2InfluxDB -DDfqdn $DD -DDAuthTokenValue $DDtoken -dumpmeasurement -InfluxDBServer 'localhost' -InfluxDB 'DDSYSTEMCAPACITY' -DDR 'DD4200' -DDLocation 'Hamburg' -DDserialno 'CKM0013370252' -DDtier 'active'
 
-
 >Add-DDSystemCapacity2InfluxDB -DDfqdn $DD -DDAuthTokenValue $DDtoken -add2InfluxDB  -InfluxDBServer 'localhost' -InfluxDB 'DDSYSTEMCAPACITY' -DDR 'DD4200' -DDLocation 'Hamburg' -DDserialno 'CKM0013370252' -DDtier 'active'
