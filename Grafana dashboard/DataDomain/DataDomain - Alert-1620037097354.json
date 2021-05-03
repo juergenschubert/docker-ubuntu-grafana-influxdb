@@ -15,8 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 7,
-  "iteration": 1619794435196,
+  "id": 10,
+  "iteration": 1620036934476,
   "links": [
     {
       "icon": "external link",
@@ -105,16 +105,16 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "super-light-red",
+                "color": "green",
                 "value": null
               },
               {
-                "color": "light-red",
-                "value": 4
+                "color": "orange",
+                "value": 1
               },
               {
                 "color": "dark-red",
-                "value": 5
+                "value": 2
               }
             ]
           }
@@ -183,16 +183,16 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "super-light-red",
+                "color": "green",
                 "value": null
               },
               {
-                "color": "light-red",
-                "value": 4
+                "color": "orange",
+                "value": 1
               },
               {
                 "color": "dark-red",
-                "value": 5
+                "value": 2
               }
             ]
           }
@@ -418,9 +418,9 @@
       {
         "allValue": null,
         "current": {
-          "selected": false,
-          "text": "\"CKM0013370252\"",
-          "value": "\"CKM0013370252\""
+          "selected": true,
+          "text": "\"CKM00133700815\"",
+          "value": "\"CKM00133700815\""
         },
         "datasource": "InfluxDB - DDALERT",
         "definition": "",
@@ -451,5 +451,5 @@
   "timezone": "",
   "title": "DataDomain - Alert",
   "uid": "QTsNGB9Gz",
-  "version": 5
+  "version": 1
 }
