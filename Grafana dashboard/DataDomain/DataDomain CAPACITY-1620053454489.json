@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 11,
-  "iteration": 1620047449452,
+  "iteration": 1620053448752,
   "links": [],
   "panels": [
     {
@@ -216,6 +216,7 @@
         {
           "alias": "TB",
           "groupBy": [],
+          "hide": false,
           "labels": "",
           "max": 10000000,
           "measurement": "TierCapacityUsagePhysicalCapacity",
@@ -223,6 +224,8 @@
           "noise": 0,
           "orderByTime": "ASC",
           "policy": "default",
+          "query": "SELECT \"PhysicalCapacityUsed\" FROM \"TierCapacityUsagePhysicalCapacity\" WHERE (\"DDR\" =~ /^$DataDomain$/) AND $timeFilter",
+          "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
           "scenarioId": "random_walk",
@@ -352,8 +355,8 @@
         },
         "overrides": []
       },
-      "fill": 1,
-      "fillGradient": 2,
+      "fill": 10,
+      "fillGradient": 10,
       "gridPos": {
         "h": 8,
         "w": 12,
@@ -500,8 +503,8 @@
         },
         "overrides": []
       },
-      "fill": 1,
-      "fillGradient": 2,
+      "fill": 10,
+      "fillGradient": 10,
       "gridPos": {
         "h": 8,
         "w": 12,
@@ -661,8 +664,8 @@
         },
         "overrides": []
       },
-      "fill": 5,
-      "fillGradient": 2,
+      "fill": 10,
+      "fillGradient": 10,
       "gridPos": {
         "h": 8,
         "w": 12,
@@ -684,7 +687,7 @@
       "linewidth": 4,
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true
+        "alertThreshold": false
       },
       "percentage": false,
       "pluginVersion": "7.2.0",
@@ -770,7 +773,7 @@
       }
     }
   ],
-  "refresh": false,
+  "refresh": "1d",
   "schemaVersion": 26,
   "style": "dark",
   "tags": [
@@ -825,5 +828,5 @@
   "timezone": "",
   "title": "DataDomain CAPACITY",
   "uid": "rQiKguuGz",
-  "version": 6
+  "version": 7
 }
